@@ -2,6 +2,7 @@
   "name": "review_gard_be",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "system": "nodemon src/index.js"
