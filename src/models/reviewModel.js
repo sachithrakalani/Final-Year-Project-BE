@@ -7,3 +7,8 @@ export const createReviewQuery = async (review_text, result) => {
   );
   return result.rows[0];
 };
+
+export const getAllReviews = async () => {
+  const result = await pool.query("SELECT * FROM reviews");
+  return result.rows[0];
+};
