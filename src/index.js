@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import pool from "./config/db.js";
+import createReviewTable from "./data/createReviewTable.js";
 
 dotenv.config();
 
@@ -9,6 +10,8 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
+
+createReviewTable();
 
 //Testing POSTGRES Connection
 app.get("/", async (req, res) => {
