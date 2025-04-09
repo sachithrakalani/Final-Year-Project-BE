@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS reviews (
     id SERIAL PRIMARY KEY,
-    reviewText VARCHAR(500) NOT NULL,
-    result VARCHAR(100) NOT NULL
+    reviewtext VARCHAR(500) NOT NULL,
+    result VARCHAR(100)
 );

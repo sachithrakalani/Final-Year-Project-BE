@@ -4,6 +4,7 @@ import cors from "cors";
 import pool from "./config/db.js";
 import createReviewTable from "./data/createReviewTable.js";
 import errorHandling from "./middlewares/errorHandling.js";
+import reviewRoutes from "./routes/reviewRoutes.js";
 
 dotenv.config();
 
@@ -11,6 +12,9 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
+
+//Routes
+app.use("/api", reviewRoutes);
 
 //Error Handling middleware
 app.use(errorHandling);
